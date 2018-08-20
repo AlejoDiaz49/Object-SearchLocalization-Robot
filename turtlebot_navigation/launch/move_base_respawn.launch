@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+
+<launch>
+  <include file="$(find turtlebot_navigation)/launch/includes/move_base.launch.xml"/>
+
+</launch>

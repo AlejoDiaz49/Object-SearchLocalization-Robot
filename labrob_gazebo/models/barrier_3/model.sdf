@@ -1,0 +1,113 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+  <model name="barrier_3">
+	<static>true</static>
+	<link name='chassis'>
+	<pose>0 0 0.5 0 0 0</pose>
+
+	<collision name='collision'>
+	  <geometry>
+		<box>
+		  <size>1 .05 1</size>
+		</box>
+	  </geometry>
+	</collision>
+
+	<visual name='visual'>
+	  <geometry>
+		<box>
+		  <size>1 .05 1</size>
+		</box>
+	  </geometry>
+      <material>
+        <ambient>.1 .1 .1 1</ambient>
+        <diffuse>.1 .1 .1 1</diffuse>
+        <specular>0.1 0.1 0.1 1</specular>
+        <emissive>0 0 0 0</emissive>
+      </material>
+	</visual>
+
+	<collision name='collision2'>
+      <pose>-0.475 0.525 0 0 0 1.57</pose>
+	  <geometry>
+		<box>
+		  <size>1 .05 1</size>
+		</box>
+	  </geometry>
+	</collision>
+
+	<visual name='visual2'>
+      <pose>-0.475 0.525 0 0 0 1.57</pose>
+	  <geometry>
+		<box>
+		  <size>1 .05 1</size>
+		</box>
+	  </geometry>
+      <material>
+        <ambient>.1 .1 .1 1</ambient>
+        <diffuse>.1 .1 .1 1</diffuse>
+        <specular>0.1 0.1 0.1 1</specular>
+        <emissive>0 0 0 0</emissive>
+      </material>
+	</visual>
+
+	<collision name='collision3'>
+      <pose>0 1 0 0 0 0</pose>
+	  <geometry>
+		<box>
+		  <size>1 .05 1</size>
+		</box>
+	  </geometry>
+	</collision>
+
+	<visual name='visual3'>
+      <pose>0 1 0 0 0 0</pose>
+	  <geometry>
+		<box>
+		  <size>1 .05 1</size>
+		</box>
+	  </geometry>
+      <material>
+        <ambient>.1 .1 .1 1</ambient>
+        <diffuse>.1 .1 .1 1</diffuse>
+        <specular>0.1 0.1 0.1 1</specular>
+        <emissive>0 0 0 0</emissive>
+      </material>
+	</visual>
+	<sensor name="contact_sensor_1" type="contact">
+
+	<plugin name="my_contact_plugin" filename="libgazebo_ros_bumper.so">
+		<bumperTopicName>obstacle_bumper</bumperTopicName>
+    		<frameName>world</frameName>
+	</plugin>
+          <contact>
+            <collision>collision</collision>
+          </contact>
+	
+      </sensor>
+	<sensor name="contact_sensor_2" type="contact">
+
+	<plugin name="my_contact_plugin" filename="libgazebo_ros_bumper.so">
+		<bumperTopicName>obstacle_bumper</bumperTopicName>
+    		<frameName>world</frameName>
+	</plugin>
+          <contact>
+            <collision>collision2</collision>
+          </contact>
+	
+      </sensor>
+	<sensor name="contact_sensor_3" type="contact">
+
+	<plugin name="my_contact_plugin" filename="libgazebo_ros_bumper.so">
+		<bumperTopicName>obstacle_bumper</bumperTopicName>
+    		<frameName>world</frameName>
+	</plugin>
+          <contact>
+            <collision>collision3</collision>
+          </contact>
+	
+      </sensor>
+
+	</link>
+	</model>
+</sdf>

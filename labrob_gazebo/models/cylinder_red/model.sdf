@@ -1,0 +1,33 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+  <model name="cylinder_red">
+	<static>true</static>
+	<link name='chassis'>
+	<pose>0 0 .25 0 0 0</pose>
+
+	<collision name='collision'>
+	  <geometry>
+		<cylinder>
+		  <radius>.25</radius>
+		  <length>.5</length>
+		</cylinder>
+	  </geometry>
+	</collision>
+
+	<visual name='visual'>
+	  <geometry>
+		<cylinder>
+		  <radius>.25</radius>
+		  <length>.5</length>
+		</cylinder>
+	  </geometry>
+      <material>
+        <ambient>1 0 0 1</ambient>
+        <diffuse>1 0 0 1</diffuse>
+        <specular>0.1 0.1 0.1 1</specular>
+        <emissive>0 0 0 0</emissive>
+      </material>
+	</visual>
+	</link>
+	</model>
+</sdf>

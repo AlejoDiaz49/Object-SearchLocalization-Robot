@@ -1,0 +1,153 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+  <model name="borders">
+	<static>true</static>
+	<link name='chassis_pos_x'>
+	<pose>10 0 0.35 0 0 1.57079</pose>
+
+	<collision name='collision_pos_x'>
+	  <geometry>
+		<box>
+		  <size>20 .05 0.7</size>
+		</box>
+	  </geometry>
+	</collision>
+
+	<visual name='visual'>
+	  <geometry>
+		<box>
+		  <size>20 .05 0.7</size>
+		</box>
+	  </geometry>
+      <material>
+        <ambient>.1 .1 .1 1</ambient>
+        <diffuse>.1 .1 .1 1</diffuse>
+        <specular>0.1 0.1 0.1 1</specular>
+        <emissive>0 0 0 0</emissive>
+      </material>
+	</visual>
+	<sensor name="contact_sensor_1" type="contact">
+
+	<plugin name="my_contact_plugin" filename="libgazebo_ros_bumper.so">
+		<bumperTopicName>border_bumper</bumperTopicName>
+    		<frameName>world</frameName>
+	</plugin>
+          <contact>
+            <collision>collision_pos_x</collision>
+          </contact>
+	
+      </sensor>
+	</link>
+
+	<link name='chassis_neg_x'>
+	<pose>-10 0 0.35 0 0 1.57079</pose>
+
+	<collision name='collision_neg_x'>
+	  <geometry>
+		<box>
+		  <size>20 .05 0.7</size>
+		</box>
+	  </geometry>
+	</collision>
+
+	<visual name='visual'>
+	  <geometry>
+		<box>
+		  <size>20 .05 0.7</size>
+		</box>
+	  </geometry>
+      <material>
+        <ambient>.1 .1 .1 1</ambient>
+        <diffuse>.1 .1 .1 1</diffuse>
+        <specular>0.1 0.1 0.1 1</specular>
+        <emissive>0 0 0 0</emissive>
+      </material>
+	</visual>
+	<sensor name="contact_sensor_2" type="contact">
+
+	<plugin name="my_contact_plugin" filename="libgazebo_ros_bumper.so">
+		<bumperTopicName>border_bumper</bumperTopicName>
+    		<frameName>world</frameName>
+	</plugin>
+          <contact>
+            <collision>collision_neg_x</collision>
+          </contact>
+	
+      </sensor>
+	</link>
+
+	<link name='chassis_pos_y'>
+	<pose>0 10 0.35 0 0 0</pose>
+
+	<collision name='collision_pos_y'>
+	  <geometry>
+		<box>
+		  <size>20 .05 0.7</size>
+		</box>
+	  </geometry>
+	</collision>
+
+	<visual name='visual'>
+	  <geometry>
+		<box>
+		  <size>20 .05 0.7</size>
+		</box>
+	  </geometry>
+      <material>
+        <ambient>.1 .1 .1 1</ambient>
+        <diffuse>.1 .1 .1 1</diffuse>
+        <specular>0.1 0.1 0.1 1</specular>
+        <emissive>0 0 0 0</emissive>
+      </material>
+	</visual>
+	<sensor name="contact_sensor_3" type="contact">
+
+	<plugin name="my_contact_plugin" filename="libgazebo_ros_bumper.so">
+		<bumperTopicName>border_bumper</bumperTopicName>
+    		<frameName>world</frameName>
+	</plugin>
+          <contact>
+            <collision>collision_pos_y</collision>
+          </contact>
+	
+      </sensor>
+	</link>
+
+	<link name='chassis_neg_y'>
+	<pose>0 -10 0.35 0 0 0</pose>
+
+	<collision name='collision_neg_y'>
+	  <geometry>
+		<box>
+		  <size>20 .05 0.7</size>
+		</box>
+	  </geometry>
+	</collision>
+
+	<visual name='visual'>
+	  <geometry>
+		<box>
+		  <size>20 .05 0.7</size>
+		</box>
+	  </geometry>
+      <material>
+        <ambient>.1 .1 .1 1</ambient>
+        <diffuse>.1 .1 .1 1</diffuse>
+        <specular>0.1 0.1 0.1 1</specular>
+        <emissive>0 0 0 0</emissive>
+      </material>
+	</visual>
+	<sensor name="contact_sensor_4" type="contact">
+
+	<plugin name="my_contact_plugin" filename="libgazebo_ros_bumper.so">
+		<bumperTopicName>border_bumper</bumperTopicName>
+    		<frameName>world</frameName>
+	</plugin>
+          <contact>
+            <collision>collision_neg_y</collision>
+          </contact>
+	
+      </sensor>
+	</link>
+	</model>
+</sdf>

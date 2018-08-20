@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Delete Error regarding footprint robot -->
+  <rosparam command="delete" ns="move_base" />
+
+  <!--- 3D Sensor -->
+  <arg name="3d_sensor" default="$(env TURTLEBOT_3D_SENSOR)"/>  <!-- r200, kinect, asus_xtion_pro -->
+  <arg name="custom_gmapping_launch_file" default="$(find turtlebot_navigation)/launch/includes/gmapping/gmapping.launch.xml"/>
+  <include file="$(arg custom_gmapping_launch_file)"/>
+
+  <!-- Move base -->
+  <include file="$(find turtlebot_navigation)/launch/includes/move_base.launch.xml"/>
+
+
+  <include file="$(find explore_lite)/launch/explore_costmap.launch"/>
+  <!--node pkg="frontier_exploration" type="explore_client" name="explore_client" output="screen"/>
+
+  <node pkg="frontier_exploration" type="explore_server" name="explore_server" output="screen">
+
+    <param name="frequency" value="1.0"/>
+
+    <param name="goal_aliasing" value="2.0"/>
+
+    <rosparam file="$(find turtlebot_navigation)/param/costmap_common_params.yaml" command="load" ns="explore_costmap" />
+    <rosparam file="$(find turtlebot_navigation)/param/costmap_exploration.yaml" command="load" ns="explore_costmap" />
+  </node-->
+
+
+  <!-- Aruco Node -->
+  <include file="$(find aruco_ros)/launch/aruco_detection.launch"/>
+
+  <!-- Rviz Visualization -->
+  <arg name="rviz_config_file" value="$(find turtlebot_gazebo)/rviz/turtlebot_slam_3.rviz"/>
+  <node name="RVIZ" pkg="rviz" type="rviz" args=" -d $(arg rviz_config_file)" />
+
+</launch>

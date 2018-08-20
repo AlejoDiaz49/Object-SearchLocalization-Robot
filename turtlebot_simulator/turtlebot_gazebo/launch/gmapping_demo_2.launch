@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Delete Error regarding footprint robot -->
+  <rosparam command="delete" ns="move_base" />
+
+  <!--- 3D Sensor -->
+  <arg name="3d_sensor" default="$(env TURTLEBOT_3D_SENSOR)"/>  <!-- r200, kinect, asus_xtion_pro -->
+  <arg name="custom_gmapping_launch_file" default="$(find turtlebot_navigation)/launch/includes/gmapping/gmapping.launch.xml"/>
+  <include file="$(arg custom_gmapping_launch_file)"/>
+
+  <!-- Move base -->
+  <include file="$(find turtlebot_navigation)/launch/includes/move_base.launch.xml"/>
+
+  <!-- Rviz Visualization -->
+  <node name="RVIZ" pkg="rviz" type="rviz" args=" -d /home/gonzalo/catkin_ws/src/turtlebot_simulator/turtlebot_slam_3.rviz" />
+
+</launch>

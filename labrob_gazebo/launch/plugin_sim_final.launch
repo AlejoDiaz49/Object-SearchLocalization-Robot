@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+<node pkg="ros_plugins" name="ros_plugins" type="ros_plugins_final" output="screen">
+        		<param name="ArucoId" value="10" />
+			
+        </node>
+
+</launch>
+
+
+

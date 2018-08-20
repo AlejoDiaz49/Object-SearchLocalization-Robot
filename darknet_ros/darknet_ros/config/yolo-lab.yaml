@@ -1,0 +1,24 @@
+yolo_model:
+
+  config_file:
+    name: yolo-obj.cfg
+  weight_file:
+    name: yolo-obj_6000.weights
+  threshold:
+    value: 0.5
+  detection_classes:
+    names:
+      - bicicleta roja
+      - bicicleta azul
+      - bicicleta verde
+      - barco rojo
+      - barco azul
+      - barco verde
+      - avion rojo
+      - avion azul
+      - avion verde
+      - botella roja
+      - botella azul
+      - botella verde
+      - moneda
+      - bomba

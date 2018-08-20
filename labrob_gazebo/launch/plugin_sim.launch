@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+<arg name="arucoNum" default="6"/>
+<node pkg="ros_plugins" name="ros_plugins" type="ros_plugins" output="screen">
+        		<param name="ArucoId" value="$(arg arucoNum)" />
+			<param name="ModelDirectory" value="$(find labrob_gazebo)/models" />
+
+        </node>
+
+</launch>
+
+
+

@@ -1,0 +1,28 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+  <model name="airplane_green">
+	<static>true</static>
+	<link name='chassis'>
+	<pose>0 0 .5 -1.5708 0 0</pose>
+
+	<collision name='collision'>
+	  <geometry>
+        <mesh><uri>model://airplane_green/meshes/plane_fixed.dae</uri></mesh>
+      </geometry>
+	</collision>
+
+    <visual name="visual">
+      <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh><uri>model://airplane_green/meshes/plane_fixed.dae</uri></mesh>
+        </geometry>
+        <material>
+          <ambient>0 1 0 1</ambient>
+          <diffuse>0 1 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+    </visual>
+	</link>
+  </model>
+</sdf>

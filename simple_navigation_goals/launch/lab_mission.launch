@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <!--arg name="markerSize"        default="0.5"/-->    <!-- in m -->
+ 
+  <node pkg="simple_navigation_goals" type="scheduler" name="mission_scheduler" output="screen"/>   
+
+  <node pkg="simple_navigation_goals" type="tf_echo_map_camera" name="map_cam_tf"/>  
+
+  <node pkg="simple_navigation_goals" type="object_mapping_server" name="RVIZ_object_mapping" output="screen"/>
+
+</launch>

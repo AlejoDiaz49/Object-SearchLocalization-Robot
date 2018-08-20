@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<sdf version="1.4">
+  <world name="default">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+<!-- BOATS -->
+    <model name="my_mesh">
+      <pose>0 0 0  0 0 0</pose>
+      <static>true</static>
+      <link name="body">
+        <visual name="visual">
+        <pose>0 0 0.5 -1.5708 0 0</pose>
+          <geometry>
+            <mesh><uri>file://boat.dae</uri></mesh>
+          </geometry>
+          <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+        </visual>
+      </link>
+    </model>
+ 
+    <model name="my_mesh">
+      <pose>0 0 0  0 0 0</pose>
+      <static>true</static>
+      <link name="body">
+        <visual name="visual">
+        <pose>0.5 0.5 0.5 -1.5708 0 0</pose>
+          <geometry>
+            <mesh><uri>file://boat.dae</uri></mesh>
+          </geometry>
+          <material>
+          <ambient>0 1 0 1</ambient>
+          <diffuse>0 1 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+        </visual>
+      </link>
+    </model>
+    
+    <model name="my_mesh">
+      <pose>0 0 0  0 0 0</pose>
+      <static>true</static>
+      <link name="body">
+        <visual name="visual">
+        <pose>1 1 0.5 -1.5708 0 0</pose>
+          <geometry>
+            <mesh><uri>file://boat.dae</uri></mesh>
+          </geometry>
+          <material>
+          <ambient>0 0 1 1</ambient>
+          <diffuse>0 0 1 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+        </visual>
+      </link>
+    </model>
+
+<!-- BIKES -->
+    <model name="my_mesh">
+      <pose>0 0 0  0 0 0</pose>
+      <static>true</static>
+      <link name="body">
+        <visual name="visual">
+        <pose>1 0 0.5 -1.5708 0 0</pose>
+          <geometry>
+            <mesh><uri>file://bike.dae</uri></mesh>
+          </geometry>
+          <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+        </visual>
+      </link>
+    </model>
+    
+    <model name="my_mesh">
+      <pose>0 0 0  0 0 0</pose>
+      <static>true</static>
+      <link name="body">
+        <visual name="visual">
+        <pose>1.5 0.5 0.5 -1.5708 0 0</pose>
+          <geometry>
+            <mesh><uri>file://bike.dae</uri></mesh>
+          </geometry>
+          <material>
+          <ambient>0 1 0 1</ambient>
+          <diffuse>0 1 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+        </visual>
+      </link>
+    </model>
+    
+    <model name="my_mesh">
+      <pose>0 0 0  0 0 0</pose>
+      <static>true</static>
+      <link name="body">
+        <visual name="visual">
+        <pose>2 1 0.5 -1.5708 0 0</pose>
+          <geometry>
+            <mesh><uri>file://bike.dae</uri></mesh>
+          </geometry>
+          <material>
+          <ambient>0 0 1 1</ambient>
+          <diffuse>0 0 1 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+        </visual>
+      </link>
+    </model>
+
+<!-- BOTTLES -->
+    <model name="my_mesh">
+      <pose>0 0 0  0 0 0</pose>
+      <static>true</static>
+      <link name="body">
+        <visual name="visual">
+        <pose>2 0 0.5 -1.5708 0 0</pose>
+          <geometry>
+            <mesh><uri>file://bottle.dae</uri></mesh>
+          </geometry>
+          <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+        </visual>
+      </link>
+    </model>
+    
+    <model name="my_mesh">
+      <pose>0 0 0  0 0 0</pose>
+      <static>true</static>
+      <link name="body">
+        <visual name="visual">
+        <pose>2.5 0.5 0.5 -1.5708 0 0</pose>
+          <geometry>
+            <mesh><uri>file://bottle.dae</uri></mesh>
+          </geometry>
+          <material>
+          <ambient>0 1 0 1</ambient>
+          <diffuse>0 1 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+        </visual>
+      </link>
+    </model>
+    
+    <model name="my_mesh">
+      <pose>0 0 0  0 0 0</pose>
+      <static>true</static>
+      <link name="body">
+        <visual name="visual">
+        <pose>3 1 0.5 -1.5708 0 0</pose>
+          <geometry>
+            <mesh><uri>file://bottle.dae</uri></mesh>
+          </geometry>
+          <material>
+          <ambient>0 0 1 1</ambient>
+          <diffuse>0 0 1 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+        </visual>
+      </link>
+    </model>
+ 
+<!-- PLANES -->
+    <model name="my_mesh">
+      <pose>0 0 0  0 0 0</pose>
+      <static>true</static>
+      <link name="body">
+        <visual name="visual">
+        <pose>3 0 0.5 -1.5708 0 0</pose>
+          <geometry>
+            <mesh><uri>file://plane.dae</uri></mesh>
+          </geometry>
+          <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+        </visual>
+      </link>
+    </model>
+    
+    <model name="my_mesh">
+      <pose>0 0 0  0 0 0</pose>
+      <static>true</static>
+      <link name="body">
+        <visual name="visual">
+        <pose>3.5 0.5 0.5 -1.5708 0 0</pose>
+          <geometry>
+            <mesh><uri>file://plane.dae</uri></mesh>
+          </geometry>
+          <material>
+          <ambient>0 1 0 1</ambient>
+          <diffuse>0 1 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+        </visual>
+      </link>
+    </model>
+    
+    <model name="my_mesh">
+      <pose>0 0 0  0 0 0</pose>
+      <static>true</static>
+      <link name="body">
+        <visual name="visual">
+        <pose>4 1 0.5 -1.5708 0 0</pose>
+          <geometry>
+            <mesh><uri>file://plane.dae</uri></mesh>
+          </geometry>
+          <material>
+          <ambient>0 0 1 1</ambient>
+          <diffuse>0 0 1 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+        </visual>
+      </link>
+    </model>
+   
+  </world>
+</sdf>

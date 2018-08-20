@@ -1,0 +1,13 @@
+material Aruco4/Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture Aruco4.png
+      }
+    }
+  }
+}

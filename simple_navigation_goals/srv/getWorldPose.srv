@@ -1,0 +1,8 @@
+float32 cam_x
+float32 cam_y
+float32 cam_z
+---
+float32 world_x
+float32 world_y
+float32 world_z
+

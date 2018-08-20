@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+
+<launch>
+
+    <arg name="marker1Id"         default="1"/>
+    <arg name="marker2Id"         default="2"/>
+    <arg name="marker3Id"         default="3"/>
+    <arg name="marker4Id"         default="4"/>
+    <arg name="marker5Id"         default="5"/>
+    <arg name="marker6Id"         default="6"/>
+    <arg name="marker7Id"         default="7"/>
+    <arg name="marker8Id"         default="8"/>
+    <arg name="marker9Id"         default="9"/>
+    <arg name="marker10Id"        default="10"/>
+    <arg name="marker11Id"        default="11"/>
+    <arg name="marker12Id"        default="12"/>
+
+    <arg name="markerSize"        default="1.0"/>    <!-- in m -->
+    <arg name="dct_normalization" default="False" />
+    <arg name="dct_filter_size"   default="2" />
+    <arg name="camera_frame"      default="camera_rgb_frame"/>
+
+    <arg name="marker1_frame"     default="aruco_frame/1" />
+    <arg name="marker2_frame"     default="aruco_frame/2" />
+    <arg name="marker3_frame"     default="aruco_frame/3" />
+    <arg name="marker4_frame"     default="aruco_frame/4" />
+    <arg name="marker5_frame"     default="aruco_frame/5" />
+    <arg name="marker6_frame"     default="aruco_frame/6" />
+    <arg name="marker7_frame"     default="aruco_frame/7" />
+    <arg name="marker8_frame"     default="aruco_frame/8" />
+    <arg name="marker9_frame"     default="aruco_frame/9" />
+    <arg name="marker10_frame"    default="aruco_frame/10" />
+    <arg name="marker11_frame"    default="aruco_frame/11" />
+    <arg name="marker12_frame"    default="aruco_frame/12" />
+
+
+    <node pkg="aruco_ros" type="double" name="aruco_simple" output="screen">>    
+        <remap from="/camera_info" to="/camera/rgb/camera_info" />
+        <remap from="/image" to="/camera/rgb/image_raw" />
+        <param name="image_is_rectified" value="True"/>
+        <param name="marker_size" value="$(arg markerSize)"/>
+        <param name="marker_id1"  value="$(arg marker1Id)"/>
+        <param name="marker_id2"  value="$(arg marker2Id)"/>
+        <param name="marker_id3"  value="$(arg marker3Id)"/>
+        <param name="marker_id4"  value="$(arg marker4Id)"/>
+        <param name="marker_id5"  value="$(arg marker5Id)"/>
+        <param name="marker_id6"  value="$(arg marker6Id)"/>
+        <param name="marker_id7"  value="$(arg marker7Id)"/>
+        <param name="marker_id8"  value="$(arg marker8Id)"/>
+        <param name="marker_id9"  value="$(arg marker9Id)"/>
+        <param name="marker_id10" value="$(arg marker10Id)"/>
+        <param name="marker_id11" value="$(arg marker11Id)"/>
+        <param name="marker_id12" value="$(arg marker12Id)"/>
+
+        <param name="normalizeImage" value="$(arg dct_normalization)"/>
+        <param name="dct_components_to_remove" value="$(arg dct_filter_size)"/>
+        <param name="parent_name" value="$(arg camera_frame)"/>
+
+        <param name="child_name1"  value="$(arg marker1_frame)" />
+        <param name="child_name2"  value="$(arg marker2_frame)" />
+        <param name="child_name3"  value="$(arg marker3_frame)" />
+        <param name="child_name4"  value="$(arg marker4_frame)" />
+        <param name="child_name5"  value="$(arg marker5_frame)" />
+        <param name="child_name6"  value="$(arg marker6_frame)" />
+        <param name="child_name7"  value="$(arg marker7_frame)" />
+        <param name="child_name8"  value="$(arg marker8_frame)" />
+        <param name="child_name9"  value="$(arg marker9_frame)" />
+        <param name="child_name10" value="$(arg marker10_frame)" />
+        <param name="child_name11" value="$(arg marker11_frame)" />
+        <param name="child_name12" value="$(arg marker12_frame)" />
+    </node>
+
+</launch>
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<sdf version='1.4'>
+  <model name="aruco_cube">
+	<static>true</static>
+	<link name='chassis'>
+	<pose>0 0 .50 0 0 0</pose>
+
+	<collision name='collision'>
+	  <geometry>
+		<box>
+		  <size>.5 .5 .5</size>
+		</box>
+	  </geometry>
+	</collision>
+
+	<visual name='visual'>
+	  <geometry>
+		<box>
+		  <size>.5 .5 .5</size>
+		</box>
+	  </geometry>
+        <material>
+          <script>
+            <uri>model://aruco_cube/materials/scripts/aruco_11.material</uri>
+            <uri>model://aruco_cube/materials/textures</uri>
+            <name>Aruco11/Diffuse</name>
+          </script>
+        </material>
+	</visual>
+	</link>
+	</model>
+</sdf>

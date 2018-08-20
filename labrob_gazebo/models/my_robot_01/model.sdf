@@ -1,0 +1,75 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+  <model name="my_robot_01">
+	
+	<link name='chassis'>
+	<pose>0 0 .1 0 0 0</pose>
+
+	<collision name='collision'>
+	  <geometry>
+		<box>
+		  <size>.4 .2 .1</size>
+		</box>
+	  </geometry>
+	<surface>
+        <contact>
+          <collide_bitmask>0x02</collide_bitmask>
+        </contact>
+      </surface>
+	</collision>
+
+	<collision name='bumper_collision'>
+	  <geometry>
+		<box>
+		  <size>.6 .4 .1</size>
+		</box>
+	  </geometry>
+	<surface>
+        <contact>
+          <collide_bitmask>0x01</collide_bitmask>
+        </contact>
+      </surface>
+	</collision>
+
+	<visual name='visual'>
+	  <geometry>
+		<box>
+		  <size>.4 .2 .1</size>
+		</box>
+	  </geometry>
+	</visual>
+	<collision name='caster_collision'>
+		<pose>-0.15 0 -0.05 0 0 0</pose>
+		<geometry>
+			<sphere>
+			<radius>.05</radius>
+		  </sphere>
+		</geometry>
+
+		<surface>
+			<contact>
+          <collide_bitmask>0x02</collide_bitmask>
+        </contact>
+		  <friction>
+			<ode>
+			  <mu>0</mu>
+			  <mu2>0</mu2>
+			  <slip1>1.0</slip1>
+			  <slip2>1.0</slip2>
+			</ode>
+		  </friction>
+		</surface>
+	</collision>
+
+	<visual name='caster_visual'>
+		<pose>-0.15 0 -0.05 0 0 0</pose>
+		<geometry>
+		  <sphere>
+			<radius>.05</radius>
+		  </sphere>
+		</geometry>
+	</visual>
+
+	</link>
+	</model>
+</sdf>

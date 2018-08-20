@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<sdf version='1.4'>
+  <model name="coin">
+    <link name='chassis'>
+    <pose>0 0 .26 0 0 0</pose>
+	<collision name="box_collision">
+     <geometry>
+	    <sphere>
+	      <radius>.25</radius>
+	    </sphere>
+	  </geometry>
+	<surface>
+     <contact>
+	    <collide_bitmask>0x01</collide_bitmask>
+       <ode>
+         <min_depth>0.001</min_depth> <!-- 10 -->
+         <kp>1e0</kp>
+       </ode>
+ 	  </contact>
+   </surface>
+  </collision>
+	
+
+      <visual name='visual'>
+       <pose>0 0 0 0 1.57 0</pose>
+	 <geometry>
+	   <cylinder>
+       	     <radius>.25</radius>
+	     <length>.1</length>
+           </cylinder>
+	 </geometry>
+         <material>
+          <ambient>1 1 0 1</ambient>
+          <diffuse>1 1 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+         </material>
+      </visual>
+	
+      <sensor name="contact_sensor_1" type="contact">
+
+	<plugin name="my_contact_plugin" filename="libgazebo_ros_bumper.so">
+		<bumperTopicName>coin_bumper</bumperTopicName>
+    		<frameName>world</frameName>
+	</plugin>
+        <contact>
+          <collision>box_collision</collision>
+        </contact>
+      </sensor>
+
+   </link>
+   <joint type="revolute" name="coin_hinge">
+     <pose>0 0 0.26 0 0 0</pose>
+       <child>chassis</child>
+       <parent>world</parent>
+       <axis>
+         <xyz>0 0 1</xyz>
+       </axis>
+    </joint>
+  </model>
+</sdf>

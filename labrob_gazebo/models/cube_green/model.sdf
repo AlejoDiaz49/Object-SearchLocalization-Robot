@@ -1,0 +1,31 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+  <model name="cube_green">
+	<static>true</static>
+	<link name='chassis'>
+	<pose>0 0 .25 0 0 0</pose>
+
+	<collision name='collision'>
+	  <geometry>
+		<box>
+		  <size>.5 .5 .5</size>
+		</box>
+	  </geometry>
+	</collision>
+
+	<visual name='visual'>
+	  <geometry>
+		<box>
+		  <size>.5 .5 .5</size>
+		</box>
+	  </geometry>
+      <material>
+        <ambient>0 1 0 1</ambient>
+        <diffuse>0 1 0 1</diffuse>
+        <specular>0.1 0.1 0.1 1</specular>
+        <emissive>0 0 0 0</emissive>
+      </material>
+	</visual>
+	</link>
+	</model>
+</sdf>

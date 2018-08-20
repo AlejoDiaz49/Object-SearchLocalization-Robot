@@ -1,0 +1,134 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <world name="default">
+    
+    <include>
+      <uri>model://labrob_ground</uri>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+<!--CUBES-->
+    <include>
+      <uri>model://cube_red</uri>
+      <pose>-1 -3 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://cube_blue</uri>
+      <pose>0 -3 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://cube_green</uri>
+      <pose>1 -3 0 0 0 0</pose>
+    </include>
+
+<!--SPHERES-->
+    <include>
+      <uri>model://sphere_red</uri>
+      <pose>-1 -2 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://sphere_blue</uri>
+      <pose>0 -2 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://sphere_green</uri>
+      <pose>1 -2 0 0 0 0</pose>
+    </include>
+
+<!--CYLINDERS-->
+    <include>
+      <uri>model://cylinder_red</uri>
+      <pose>-1 -1 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://cylinder_blue</uri>
+      <pose>0 -1 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://cylinder_green</uri>
+      <pose>1 -1 0 0 0 0</pose>
+    </include>
+
+<!--BARRIERS-->
+    <include>
+      <uri>model://barrier_1</uri>
+      <pose>-4 -2 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://barrier_2</uri>
+      <pose>-4 0 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://barrier_3</uri>
+      <pose>-4 2 0 0 0 0</pose>
+    </include>
+
+
+
+<!--AIRPLANES-->
+    <include>
+      <uri>model://airplane_red</uri>
+      <pose>-1 0 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://airplane_blue</uri>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://airplane_green</uri>
+      <pose>1 0 0 0 0 0</pose>
+    </include>
+
+<!--BOATS-->
+    <include>
+      <uri>model://boat_red</uri>
+      <pose>-1 1 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://boat_blue</uri>
+      <pose>0 1 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://boat_green</uri>
+      <pose>1 1 0 0 0 0</pose>
+    </include>
+
+<!--BIKES-->
+    <include>
+      <uri>model://bike_red</uri>
+      <pose>-1 2 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://bike_blue</uri>
+      <pose>0 2 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://bike_green</uri>
+      <pose>1 2 0 0 0 0</pose>
+    </include>
+
+<!--BOTTLES-->
+    <include>
+      <uri>model://bottle_red</uri>
+      <pose>-1 3 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://bottle_blue</uri>
+      <pose>0 3 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://bottle_green</uri>
+      <pose>1 3 0 0 0 0</pose>
+    </include>
+
+<!--ARUCO-->
+    <include>
+      <uri>model://aruco_cube</uri>
+      <pose>0 -4 0 0 0 0</pose>
+    </include>
+  </world>
+</sdf>

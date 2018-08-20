@@ -1,0 +1,19 @@
+global_costmap:
+   global_frame: /map
+   robot_base_frame: /base_footprint
+   update_frequency: 15.0 #1.0
+   publish_frequency: 2.0 #0.5
+   static_map: false
+   rolling_window: true
+   width: 40.0
+   height: 40.0
+#   origin_x: -8.5
+#   origin_y: 8.5
+   transform_tolerance: 0.5
+   plugins:
+     - {name: static_layer,            type: "costmap_2d::StaticLayer"}
+     - {name: obstacle_layer,          type: "costmap_2d::VoxelLayer"}
+#     - {name: sonar_layer,             type: "range_sensor_layer::RangeSensorLayer"}
+     - {name: inflation_layer,         type: "costmap_2d::InflationLayer"}
+#     - {name: sonar_layer,             type: "range_sensor_layer::RangeSensorLayer"}
+

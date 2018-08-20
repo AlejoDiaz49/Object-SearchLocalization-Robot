@@ -1,0 +1,82 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="labrob_ground">
+    <static>true</static>
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <surface>
+
+
+        <contact>
+          <collide_bitmask>0x02</collide_bitmask>
+        </contact>
+
+        </surface>
+      </collision>
+      <visual name="visual">
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+<!--
+            <uri>model://asphalt_plane/materials/scripts</uri>
+            <uri>model://asphalt_plane/materials/textures</uri>
+-->
+            <uri>model://labrob_ground/materials/scripts/</uri>
+            <uri>model://labrob_ground/materials/textures/</uri>
+            <name>Labrob/AsphaltGround</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
+
+<!--
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="asphalt_plane">
+    <static>true</static>
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>20 20 .1</size>
+          </box>
+        </geometry>
+	<surface>
+        <contact>
+          <collide_bitmask>0x02</collide_bitmask>
+        </contact>
+      </surface>
+      </collision>
+      <visual name="visual">
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <box>
+            <size>20 20 .1</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://asphalt_plane/materials/scripts</uri>
+            <uri>model://asphalt_plane/materials/textures</uri>
+            <name>vrc/asphalt</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
+-->
