@@ -1,14 +1,7 @@
 # Object-SearchLocalization-Robot
-<<<<<<< HEAD
 > ROS Simulation of a mobile robot that is capabell of recognized and localize object in the enviroment
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
-
-ROS Simulation of a mobile robot that is capabell of recognized and localize object in the enviroment.And eventually go to one of them
-
-![](header.png)
+[![Demo](https://img.youtube.com/vi/o789586vQO0/0.jpg)](https://youtu.be/o789586vQO0)
 
 ## Installation and Building
 
@@ -45,10 +38,6 @@ The Simulation can be launch in different ways
 
 ### Automatic control
 
-
 ## Development setup
 
-
 ## Release History
-=======
->>>>>>> 6483bd7bc4a58640430db924d9f72db6d4c88e6b
