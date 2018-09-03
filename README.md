@@ -1,4 +1,5 @@
 # Object-SearchLocalization-Robot
+<<<<<<< HEAD
 > ROS Simulation of a mobile robot that is capabell of recognized and localize object in the enviroment
 
 [![NPM Version][npm-image]][npm-url]
@@ -49,3 +50,5 @@ The Simulation can be launch in different ways
 
 
 ## Release History
+=======
+>>>>>>> 6483bd7bc4a58640430db924d9f72db6d4c88e6b
